@@ -1,1 +1,1 @@
-protoc --proto_path=pb --go_out=go/pingpong_proto --go_opt=paths=source_relative pb/*.proto
+protoc --proto_path=pb --go_out=go_pb/pingpong_proto --go_opt=paths=source_relative pb/*.proto

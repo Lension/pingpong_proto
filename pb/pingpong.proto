@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pingpong;
 
-option go_package ="github.com/Lension/pingpong_proto/go/pingponng_proto;pingpong_proto";
+option go_package ="github.com/Lension/pingpong_proto/go_pb/pingponng_proto;pingpong_proto";
 
 message Ping{
   int64 mID = 1;
