@@ -1,4 +1,4 @@
-module github.com/Lension/pingpong_proto
+module github.com/Lension/pingpong_proto/go
 
 go 1.20
 
