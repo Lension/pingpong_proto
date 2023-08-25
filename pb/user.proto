@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package user;
+
+option go_package ="pingpong/go_pb/user;user";
+
+message Ping{
+  int64 mID = 1;
+}
+
+message Pong {
+  int64 mID= 2;
+}
