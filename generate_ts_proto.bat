@@ -1,0 +1,1 @@
+protoc --proto_path=pb --plugin=protoc-gen-ts_proto="C:\Users\ASUS\node_modules\.bin\protoc-gen-ts_proto.cmd" --ts_proto_out=ts_proto pb/*.proto

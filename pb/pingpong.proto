@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pingpong;
+
+option go_package ="github.com/Lension/pingpong_proto/go;pingpong_proto";
+
+message Ping{
+  int64 mID = 1;
+}
+
+message Pong {
+  int64 mID= 2;
+}
