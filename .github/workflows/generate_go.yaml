@@ -16,6 +16,8 @@ jobs:
         uses: arduino/setup-protoc@v2
         with:
           version: '24.x'
+      - name: install dart
+        uses: dart-lang/setup-dart@v1
       - name: generate dart file
         run: |
           dart pub global activate protoc_plugin
