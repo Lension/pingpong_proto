@@ -50,7 +50,7 @@ for path, dirs, files in os.walk("./pb"):
         #src = os.path.join(*re.split(r'/', path)[2:])
         #if not os.path.exists(src):
         #    os.makedirs(src)
-        src = os.path.join(".\\")
+        src = os.path.join("")
 
         copy_file(dst, src, name, ".pb.go")
         copy_file(dst, src, name, "_grpc.pb.go")
