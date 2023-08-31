@@ -52,8 +52,6 @@ for path, dirs, files in os.walk("./pb"):
         #    os.makedirs(src)
         src = os.path.join(".\\")
 
-        dst = "actions/"
-
         copy_file(dst, src, name, ".pb.go")
         copy_file(dst, src, name, "_grpc.pb.go")
         #shutil.rmtree(os.path.split(src)[0])
