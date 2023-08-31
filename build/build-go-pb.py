@@ -44,7 +44,7 @@ for path, dirs, files in os.walk("./pb"):
         name, ext = os.path.splitext(basename)
         print("路径", path, "文件", file)
 
-        dst = re.findall(r'go_pb/.*', result2)[0]
+        dst = re.findall(r'actions/.*', result2)[0]
         if not os.path.exists(dst):
             os.makedirs(dst)
         #src = os.path.join(*re.split(r'/', path)[2:])
