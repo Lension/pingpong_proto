@@ -7,3 +7,7 @@ option go_package ="github.com/Lension/pingpong_proto/go_pb/user;user";
 message User {
   string name = 1;
 }
+
+message Player {
+  User user = 1;
+}
