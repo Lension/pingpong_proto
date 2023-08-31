@@ -25,8 +25,11 @@ jobs:
           protoc --proto_path=pb --dart_out=dart/lib/protos pb/*.proto
       - name: generate ts files
         run: |
-          npm install ts-protoc-gen
-          protoc --proto_path=pb --plugin="protoc-gen-ts=./node_modules/.bin/protoc-gen-ts" --ts_out=ts pb/*.proto
+          pwd
+          cd $HOME
+          pwd
+          #npm install ts-protoc-gen
+          #protoc --proto_path=pb --plugin="protoc-gen-ts=./node_modules/.bin/protoc-gen-ts" --ts_out=ts pb/*.proto
       - name: generate go files
         run: |
           export GOPATH=$HOME/go
