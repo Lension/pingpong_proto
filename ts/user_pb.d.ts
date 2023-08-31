@@ -45,3 +45,23 @@ export namespace Player {
   }
 }
 
+export class Score extends jspb.Message {
+  getNum(): number;
+  setNum(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Score.AsObject;
+  static toObject(includeInstance: boolean, msg: Score): Score.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Score, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Score;
+  static deserializeBinaryFromReader(message: Score, reader: jspb.BinaryReader): Score;
+}
+
+export namespace Score {
+  export type AsObject = {
+    num: number,
+  }
+}
+

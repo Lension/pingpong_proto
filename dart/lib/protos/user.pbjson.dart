@@ -37,3 +37,15 @@ const Player$json = {
 final $typed_data.Uint8List playerDescriptor = $convert.base64Decode(
     'CgZQbGF5ZXISHgoEdXNlchgBIAEoCzIKLnVzZXIuVXNlclIEdXNlcg==');
 
+@$core.Deprecated('Use scoreDescriptor instead')
+const Score$json = {
+  '1': 'Score',
+  '2': [
+    {'1': 'num', '3': 1, '4': 1, '5': 3, '10': 'num'},
+  ],
+};
+
+/// Descriptor for `Score`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scoreDescriptor = $convert.base64Decode(
+    'CgVTY29yZRIQCgNudW0YASABKANSA251bQ==');
+
