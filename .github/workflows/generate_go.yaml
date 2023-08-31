@@ -27,7 +27,7 @@ jobs:
           echo $(find $PROTO_DIR -type f -name '*.proto')
           protoc -I=$PROTO_DIR  --go_out=$GEN_OUT_DIR  --go-grpc_out=$GEN_OUT_DIR  $(find $PROTO_DIR -type f -name '*.proto')
           ls $GEN_OUT_DIR
-          py build/build-go-pb.py
+          python build/build-go-pb.py
         env:
           GEN_OUT_DIR: actions/build/go
           PROTO_DIR: pb
