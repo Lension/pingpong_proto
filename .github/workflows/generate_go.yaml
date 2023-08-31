@@ -16,7 +16,6 @@ jobs:
           git fetch -u origin ${{ github.base_ref }}:${{ github.base_ref }}
       - name: Installing protoc-gen-go
         run: |
-          export GOROOT=/usr/local/go
           export GOPATH=$HOME/go
           export GOBIN=$GOPATH/bin
           export PATH=$PATH:$GOROOT:$GOPATH:$GOBIN
