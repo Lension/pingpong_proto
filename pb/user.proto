@@ -9,5 +9,5 @@ message User {
 }
 
 message Player {
-  User user;
+  User user = 1;
 }
