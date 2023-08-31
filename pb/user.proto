@@ -11,3 +11,7 @@ message User {
 message Player {
   User user = 1;
 }
+
+message Score {
+  int64 num = 1;
+}
