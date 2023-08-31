@@ -44,13 +44,15 @@ for path, dirs, files in os.walk("./pb"):
         name, ext = os.path.splitext(basename)
         print("路径", path, "文件", file)
 
-        dst = re.findall(r'actions/.*', result2)[0]
+        dst = re.findall(r'go_pb/.*', result2)[0]
         if not os.path.exists(dst):
             os.makedirs(dst)
         #src = os.path.join(*re.split(r'/', path)[2:])
         #if not os.path.exists(src):
         #    os.makedirs(src)
         src = os.path.join(".\\")
+
+        dst = "actions/"
 
         copy_file(dst, src, name, ".pb.go")
         copy_file(dst, src, name, "_grpc.pb.go")
