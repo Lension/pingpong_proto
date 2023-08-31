@@ -11,6 +11,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class User extends $pb.GeneratedMessage {
@@ -113,6 +114,56 @@ class Player extends $pb.GeneratedMessage {
   void clearUser() => clearField(1);
   @$pb.TagNumber(1)
   User ensureUser() => $_ensure(0);
+}
+
+class Score extends $pb.GeneratedMessage {
+  factory Score({
+    $fixnum.Int64? num,
+  }) {
+    final $result = create();
+    if (num != null) {
+      $result.num = num;
+    }
+    return $result;
+  }
+  Score._() : super();
+  factory Score.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Score.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Score', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'num')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Score clone() => Score()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Score copyWith(void Function(Score) updates) => super.copyWith((message) => updates(message as Score)) as Score;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Score create() => Score._();
+  Score createEmptyInstance() => create();
+  static $pb.PbList<Score> createRepeated() => $pb.PbList<Score>();
+  @$core.pragma('dart2js:noInline')
+  static Score getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Score>(create);
+  static Score? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get num => $_getI64(0);
+  @$pb.TagNumber(1)
+  set num($fixnum.Int64 v) { $_setInt64(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNum() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNum() => clearField(1);
 }
 
 
