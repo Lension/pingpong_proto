@@ -22,6 +22,7 @@ jobs:
         run: |
           protoc -I=$PROTO_DIR \ 
           --go_out=$GEN_OUT_DIR \ 
+          --go-grpc_out=$GEN_OUT_DIR \ 
           $(find $PROTO_DIR -type f -name '*.proto')
         env:
           GEN_OUT_DIR: actions/build/go
