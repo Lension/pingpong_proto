@@ -18,12 +18,16 @@ jobs:
           version: '24.x'
       - name: install dart
         uses: dart-lang/setup-dart@v1
-      - name: generate dart file
+      - name: generate dart files
         run: |
           dart pub global activate protoc_plugin
           export PATH=$PATH:~/.pub-cache/bin
           protoc --proto_path=pb --dart_out=dart/lib/protos pb/*.proto
-      - name: install plugin and generate
+      - name: generate ts files
+        run: |
+          npm install ts-protoc-gen
+          protoc --proto_path=pb --plugin="protoc-gen-ts=./node_modules/.bin/protoc-gen-ts" --ts_out=ts pb/*.proto
+      - name: generate go files
         run: |
           export GOPATH=$HOME/go
           export GOBIN=$GOPATH/bin
